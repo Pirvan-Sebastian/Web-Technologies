@@ -1,0 +1,17 @@
+@layer repair {
+  nav{position:static;display:flex;flex-wrap:wrap;height:auto;align-items:center}
+  nav a{flex:0 1 auto}
+  nav button{flex:0 1 auto;min-width:max-content}
+  main{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+  aside,section{min-width:0;width:auto}
+  .cards{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+  .cards article{width:auto;height:auto;overflow:visible;min-width:0}
+  .notice{color:#172033;background:#dce9ff}
+  button{flex:0 1 auto;outline:2px solid transparent;outline-offset:2px}
+  button:focus-visible{outline:3px solid #175cd3}
+
+  @media (min-width:48rem) {
+    main{grid-template-columns:minmax(12rem,1fr) minmax(0,3fr)}
+    .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+}
